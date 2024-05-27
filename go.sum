@@ -2,8 +2,8 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
 github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
-github.com/neocotic/go-optional v0.1.0 h1:oUMDBaDRhphjNJpys/Tpg//M5+tg1YR5/Kll3/bql8w=
-github.com/neocotic/go-optional v0.1.0/go.mod h1:ULwq9gQNVdSByBqAlx1xL5MzqjYwwrSD6mBhWsfvo+o=
+github.com/neocotic/go-optional v0.1.1 h1:vLNqezlrI5nAIMh/0fz9mSZ1/0B2xxgfOlzqmMFR/mg=
+github.com/neocotic/go-optional v0.1.1/go.mod h1:ULwq9gQNVdSByBqAlx1xL5MzqjYwwrSD6mBhWsfvo+o=
 github.com/neocotic/go-pointers v0.2.0 h1:WL3y72qVNeixePF6of6ACtz/JlvQXzoMC0Z3ULSNleY=
 github.com/neocotic/go-pointers v0.2.0/go.mod h1:IQiaywMJpATTcUPA/mY2HwjgLajUYRTUxmdKu/fJTS8=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
