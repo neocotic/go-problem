@@ -392,6 +392,6 @@ func (b *Builder) URL() *url.URL {
 }
 
 // Build returns a Builder.
-func Build() Builder {
-	return Builder{}
+func Build() *Builder {
+	return &Builder{}
 }

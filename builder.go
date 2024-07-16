@@ -597,24 +597,24 @@ func (b *Builder) getUUID(ctx context.Context, gen *Generator) string {
 }
 
 // Build returns a Builder for the Generator with context.Background which can be used to construct problems.
-func (g *Generator) Build() Builder {
-	return Builder{
+func (g *Generator) Build() *Builder {
+	return &Builder{
 		Generator: g,
 		ctx:       optional.Of(context.Background()),
 	}
 }
 
 // BuildContext returns a Builder for the Generator with the given context which can be used to construct problems.
-func (g *Generator) BuildContext(ctx context.Context) Builder {
-	return Builder{
+func (g *Generator) BuildContext(ctx context.Context) *Builder {
+	return &Builder{
 		Generator: g,
 		ctx:       optional.Of(ctx),
 	}
 }
 
 // Build is a convenient shorthand for calling Generator.Build on DefaultGenerator.
-func Build() Builder {
-	return Builder{
+func Build() *Builder {
+	return &Builder{
 		Generator: DefaultGenerator,
 		ctx:       optional.Of(context.Background()),
 	}
@@ -622,8 +622,8 @@ func Build() Builder {
 
 // BuildContext is a convenient shorthand for calling Generator.BuildContext on the Generator within the given
 // context.Context, if any, otherwise DefaultGenerator.
-func BuildContext(ctx context.Context) Builder {
-	return Builder{
+func BuildContext(ctx context.Context) *Builder {
+	return &Builder{
 		Generator: GetGenerator(ctx),
 		ctx:       optional.Of(ctx),
 	}

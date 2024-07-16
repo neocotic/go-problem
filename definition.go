@@ -70,8 +70,8 @@ type Definition struct {
 
 // Build is a convenient shorthand for calling Generator.Build on DefaultGenerator with the Definition already passed to
 // Builder.Definition.
-func (d Definition) Build() Builder {
-	return Builder{
+func (d Definition) Build() *Builder {
+	return &Builder{
 		Generator: DefaultGenerator,
 		ctx:       optional.Of(context.Background()),
 		def:       d,
@@ -80,8 +80,8 @@ func (d Definition) Build() Builder {
 
 // BuildContext is a convenient shorthand for calling Generator.BuildContext on the Generator within the given
 // context.Context, if any, otherwise DefaultGenerator, with the Definition already passed to Builder.Definition.
-func (d Definition) BuildContext(ctx context.Context) Builder {
-	return Builder{
+func (d Definition) BuildContext(ctx context.Context) *Builder {
+	return &Builder{
 		Generator: GetGenerator(ctx),
 		ctx:       optional.Of(ctx),
 		def:       d,
@@ -90,8 +90,8 @@ func (d Definition) BuildContext(ctx context.Context) Builder {
 
 // BuildContextUsing is a convenient shorthand for calling Generator.BuildContext with the Definition already passed to
 // Builder.Definition.
-func (d Definition) BuildContextUsing(ctx context.Context, gen *Generator) Builder {
-	return Builder{
+func (d Definition) BuildContextUsing(ctx context.Context, gen *Generator) *Builder {
+	return &Builder{
 		Generator: gen,
 		ctx:       optional.Of(ctx),
 		def:       d,
@@ -100,8 +100,8 @@ func (d Definition) BuildContextUsing(ctx context.Context, gen *Generator) Build
 
 // BuildUsing is a convenient shorthand for calling Generator.Build with the Definition already passed to
 // Builder.Definition.
-func (d Definition) BuildUsing(gen *Generator) Builder {
-	return Builder{
+func (d Definition) BuildUsing(gen *Generator) *Builder {
+	return &Builder{
 		Generator: gen,
 		ctx:       optional.Of(context.Background()),
 		def:       d,

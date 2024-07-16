@@ -101,8 +101,8 @@ const (
 
 // Build is a convenient shorthand for calling Generator.Build on DefaultGenerator with the Type already passed to
 // Builder.DefinitionType.
-func (t Type) Build() Builder {
-	return Builder{
+func (t Type) Build() *Builder {
+	return &Builder{
 		Generator: DefaultGenerator,
 		ctx:       optional.Of(context.Background()),
 		def:       Definition{Type: t},
@@ -111,8 +111,8 @@ func (t Type) Build() Builder {
 
 // BuildContext is a convenient shorthand for calling Generator.BuildContext on the Generator within the given
 // context.Context, if any, otherwise DefaultGenerator, with the Type already passed to Builder.DefinitionType.
-func (t Type) BuildContext(ctx context.Context) Builder {
-	return Builder{
+func (t Type) BuildContext(ctx context.Context) *Builder {
+	return &Builder{
 		Generator: GetGenerator(ctx),
 		ctx:       optional.Of(ctx),
 		def:       Definition{Type: t},
@@ -121,8 +121,8 @@ func (t Type) BuildContext(ctx context.Context) Builder {
 
 // BuildContextUsing is a convenient shorthand for calling Generator.BuildContext with the Type already passed to
 // Builder.DefinitionType.
-func (t Type) BuildContextUsing(ctx context.Context, gen *Generator) Builder {
-	return Builder{
+func (t Type) BuildContextUsing(ctx context.Context, gen *Generator) *Builder {
+	return &Builder{
 		Generator: gen,
 		ctx:       optional.Of(ctx),
 		def:       Definition{Type: t},
@@ -131,8 +131,8 @@ func (t Type) BuildContextUsing(ctx context.Context, gen *Generator) Builder {
 
 // BuildUsing is a convenient shorthand for calling Generator.Build with the Type already passed to
 // Builder.DefinitionType.
-func (t Type) BuildUsing(gen *Generator) Builder {
-	return Builder{
+func (t Type) BuildUsing(gen *Generator) *Builder {
+	return &Builder{
 		Generator: gen,
 		ctx:       optional.Of(context.Background()),
 		def:       Definition{Type: t},
