@@ -41,7 +41,7 @@ func NoopTranslator() Translator {
 //
 // If Generator.Translator is nil, defaultValue is returned. This is the equivalent of using NoopTranslator.
 func (g *Generator) translateOrElse(ctx context.Context, key any, defaultValue string) string {
-	if t := g.Translator; t != nil {
+	if t := g.Translator; t == nil {
 		return defaultValue
 	} else if v := t(ctx, key); v != "" {
 		return v
