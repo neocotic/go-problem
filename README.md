@@ -13,7 +13,7 @@ Problem Details for HTTP APIs.
 Install using [go install](https://go.dev/ref/mod#go-install):
 
 ``` sh
-go install github.com/neocotic/go-problem
+go get github.com/neocotic/go-problem
 ```
 
 Then import the package into your own code:
